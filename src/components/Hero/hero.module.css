@@ -1,0 +1,29 @@
+.container {
+  padding-top: var(--size-l);
+  padding-bottom: var(--size-l);
+  border: 1px solid black;
+  background-image: url("/dot-transparent.png");
+  background-size: 24px;
+
+  @media (--desktop) {
+    padding-top: var(--size-xl);
+    padding-bottom: var(--size-xl);
+  }
+}
+
+.wrapper {
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+}
+
+.backdrop {
+  background: var(--background);
+  width: 80%;
+  padding: var(--size-m) var(--size-s);
+  border: 1px solid blue;
+
+  @media (--desktop) {
+    margin-left: -32px;
+    padding-left: 48px;
+  }
+}
