@@ -8,3 +8,11 @@ export const H1 = ({ children }) => {
 export const H2 = ({ children }) => {
   return <h2 className={css.h2}>{children}</h2>;
 };
+
+export const H3 = ({ children }) => {
+  return <h3 className={css.h3}>{children}</h3>;
+};
+
+export const H4 = ({ children }) => {
+  return <h4 className={css.h4}>{children}</h4>;
+};
