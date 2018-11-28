@@ -1,8 +1,14 @@
 .container {
   border: 2px solid red;
   background: var(--background);
+}
 
-  @media (min-width: 600px) {
+.wrapper {
+  border: 1px solid blue;
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+
+  @media (--tablet-landscape) {
     display: flex;
     justify-content: space-between;
   }
@@ -17,7 +23,7 @@
 .button {
   border: 2px solid green;
 
-  @media (min-width: 600px) {
+  @media (--tablet-landscape) {
     display: none;
   }
 }
@@ -25,7 +31,7 @@
 .list {
   display: none;
 
-  @media (min-width: 600px) {
+  @media (--tablet-landscape) {
     display: flex;
   }
 }
@@ -34,7 +40,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 600px) {
+  @media (--tablet-landscape) {
     flex-direction: row;
   }
 }
@@ -43,7 +49,7 @@
   padding: var(--size-s);
   border-bottom: 1px solid red;
 
-  @media (min-width: 600px) {
+  @media (--tablet-landscape) {
     border: 0;
     margin-right: var(--size-m);
   }
@@ -52,7 +58,7 @@
 .element:last-child {
   border-bottom: 0;
 
-  @media (min-width: 600px) {
+  @media (--tablet-landscape) {
     margin-right: 0;
   }
 }

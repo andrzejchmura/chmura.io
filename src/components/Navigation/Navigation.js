@@ -25,24 +25,26 @@ class Navigation extends React.Component {
 
     return (
       <div className={css.container}>
-        <div className={css.navigation}>
-          <h3>{title}</h3>
-          <button className={css.button} onClick={this.toggleOpen}>
-            {open ? "X" : "V"}
-          </button>
+        <div className={css.wrapper}>
+          <div className={css.navigation}>
+            <h3>{title}</h3>
+            <button className={css.button} onClick={this.toggleOpen}>
+              {open ? "X" : "V"}
+            </button>
+          </div>
+          <ul
+            className={cx({
+              [css.list]: true,
+              [css.open]: open
+            })}
+          >
+            {routes.map(route => (
+              <li key={route} className={css.element}>
+                route
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul
-          className={cx({
-            [css.list]: true,
-            [css.open]: open
-          })}
-        >
-          {routes.map(route => (
-            <li key={route} className={css.element}>
-              route
-            </li>
-          ))}
-        </ul>
       </div>
     );
   }
