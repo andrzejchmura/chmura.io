@@ -1,0 +1,9 @@
+.container {
+  border: 1px solid lightblue;
+}
+
+.wrapper {
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+  padding: var(--size-s);
+}
