@@ -5,6 +5,12 @@
   --size-l: 64px;
   --size-xl: 128px;
   --background: #ffffff;
+  --black: #000000;
   --accent: red;
   --primary: blue;
 }
+
+@custom-media --tablet-portrait (min-width: 600px);
+@custom-media --tablet-landscape (min-width: 900px);
+@custom-media --desktop (min-width: 1200px);
+@custom-media --desktop-large (min-width: 1800px);
