@@ -1,0 +1,10 @@
+:root {
+  --size-xs: 8px;
+  --size-s: 16px;
+  --size-m: 32px;
+  --size-l: 64px;
+  --size-xl: 128px;
+  --background: #ffffff;
+  --accent: red;
+  --primary: blue;
+}
