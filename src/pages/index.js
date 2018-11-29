@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import Section from "../components/Section/Section";
 import Card from "../components/Card/Card";
+import Footer from "../components/Footer/Footer";
 
 import "../reset.css";
 import "../variables.css";
@@ -36,6 +37,7 @@ const IndexPage = props => {
         <Card title="First" />
         <Card title="Second" />
       </Section>
+      <Footer />
     </React.Fragment>
   );
 };
