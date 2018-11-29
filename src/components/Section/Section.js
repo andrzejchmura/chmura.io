@@ -7,7 +7,7 @@ const Section = ({ title, children }) => {
     <section className={css.container}>
       <div className={css.wrapper}>
         <H4>{title}</H4>
-        {children}
+        <div className={css.grid}>{children}</div>
       </div>
     </section>
   );

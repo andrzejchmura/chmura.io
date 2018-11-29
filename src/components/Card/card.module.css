@@ -1,3 +1,15 @@
 .container {
+  position: relative;
   border: 1px solid purple;
+  border-radius: 6px;
+  padding: var(--size-s);
+  height: 180px;
+}
+
+.wrapper {
+  position: absolute;
+  border: 1px solid red;
+  left: var(--size-s);
+  right: var(--size-s);
+  bottom: var(--size-s);
 }

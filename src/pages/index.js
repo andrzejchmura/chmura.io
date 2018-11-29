@@ -7,8 +7,15 @@ import Card from "../components/Card/Card";
 
 import "../reset.css";
 import "../variables.css";
+import "../global.css";
 
 const routes = ["about", "labs", "writings"];
+
+const projects = [
+  { title: "Almanax", desc: "Workout App", image: "" },
+  { title: "Unleash", desc: "Design system", image: "" },
+  { title: "Rush Hour", desc: "Solver algorithm exploration", image: "" }
+];
 
 const IndexPage = props => {
   return (
@@ -16,8 +23,14 @@ const IndexPage = props => {
       <Navigation title={"chmura.io"} routes={routes} />
       <Hero />
       <Section title="Projects">
-        <Card title="First" />
-        <Card title="Second" />
+        {projects.map(project => (
+          <Card
+            key={project.title}
+            title={project.title}
+            desc={project.desc}
+            image={project.image}
+          />
+        ))}
       </Section>
       <Section title="Writings">
         <Card title="First" />
