@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import Helmet from "react-helmet";
 import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import Section from "../components/Section/Section";
@@ -21,6 +22,11 @@ const projects = [
 const IndexPage = props => {
   return (
     <React.Fragment>
+      <Helmet
+        htmlAttributes={{ lang: "en" }}
+        meta={[{ name: "description", content: "siteDescription goes here" }]}
+        title={`Chmura.io`}
+      />
       <Navigation title={"chmura.io"} routes={routes} />
       <Hero />
       <Section title="Projects">

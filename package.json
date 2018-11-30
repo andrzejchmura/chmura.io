@@ -12,9 +12,11 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.0.33",
     "gatsby-plugin-postcss": "^2.0.1",
+    "gatsby-plugin-react-helmet": "^3.0.3",
     "postcss-custom-media": "^7.0.7",
     "postcss-nested": "^4.1.0",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0"
   }
 }
