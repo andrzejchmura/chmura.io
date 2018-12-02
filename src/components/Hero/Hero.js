@@ -7,7 +7,7 @@ const Hero = props => {
     <div className={css.container}>
       <div className={css.wrapper}>
         <div className={css.backdrop}>
-          <H1>Hey there! I’m a Polish Javascript developer.</H1>
+          <H1>Hey there! I’m a Polish JavaScript developer.</H1>
           <H2>
             Currently working on web based mobile
             <strong> augmented reality </strong>experiences.

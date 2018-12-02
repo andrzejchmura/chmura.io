@@ -1,27 +1,31 @@
 .container {
-  border: 2px solid red;
   background: var(--background);
 }
 
 .wrapper {
-  border: 1px solid blue;
   max-width: var(--wrapper-width);
   margin: 0 auto;
 
   @media (--tablet-landscape) {
     display: flex;
     justify-content: space-between;
+    padding: var(--size-xs);
   }
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: var(--size-s);
 }
 
 .button {
-  border: 2px solid green;
+  padding: 4px;
+  margin: 0;
+  line-height: 0;
+  border: 0;
+  background: transparent;
 
   @media (--tablet-landscape) {
     display: none;
@@ -45,9 +49,9 @@
   }
 }
 
-.element {
+.link {
   padding: var(--size-s);
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid var(--grey);
 
   @media (--tablet-landscape) {
     border: 0;
@@ -55,9 +59,15 @@
   }
 }
 
-.element:last-child {
-  border-bottom: 0;
+.link:first-child {
+  border-top: 1px solid var(--grey);
 
+  @media (--tablet-landscape) {
+    border-top: 0;
+  }
+}
+
+.link:last-child {
   @media (--tablet-landscape) {
     margin-right: 0;
   }
