@@ -1,19 +1,19 @@
 .h1 {
   color: var(--black);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.25;
+  margin-bottom: var(--size-xs);
 
   @media (--desktop) {
-    font-size: 36px;
+    font-size: 40px;
   }
 }
 
 .h2 {
   color: #666666;
   font-size: 18px;
-  margin-top: var(--size-xs);
-  line-height: normal;
+  line-height: 1.25;
 
   strong {
     font-weight: 600;
@@ -27,4 +27,14 @@
 
 .h3 {
   font-size: 24px;
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
 }

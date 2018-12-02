@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 import css from "./typography.module.css";
 
 export const H1 = ({ children }) => {
@@ -15,4 +16,12 @@ export const H3 = ({ children }) => {
 
 export const H4 = ({ children }) => {
   return <h4 className={css.h4}>{children}</h4>;
+};
+
+export const Link = ({ children, ...rest }) => {
+  return (
+    <GatsbyLink className={css.link} {...rest}>
+      {children}
+    </GatsbyLink>
+  );
 };

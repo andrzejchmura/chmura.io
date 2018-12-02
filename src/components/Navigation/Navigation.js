@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import cx from "classnames";
 import css from "./navigation.module.css";
 import Icon from "../../components/Icon/Icon";
 import Icons from "../../components/Icon/Icons";
+import { Link } from "../../components/Typography/Typography";
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -27,28 +27,30 @@ class Navigation extends React.Component {
     const { open } = this.state;
 
     return (
-      <div className={css.container}>
-        <div className={css.wrapper}>
+      <header className={css.container}>
+        <nav className={css.wrapper}>
           <div className={css.navigation}>
-            <h3>{title}</h3>
+            <Link to="/">
+              <h3>{title}</h3>
+            </Link>
             <Icon className={css.button} onClick={this.toggleOpen}>
               {open ? Icons.Close : Icons.Arrow}
             </Icon>
           </div>
-          <nav
+          <ul
             className={cx({
               [css.list]: true,
               [css.open]: open
             })}
           >
             {routes.map(route => (
-              <Link key={route} to={route} className={css.link}>
-                {route}
-              </Link>
+              <li key={route} className={css.link}>
+                <Link to={route}>{route}</Link>
+              </li>
             ))}
-          </nav>
-        </div>
-      </div>
+          </ul>
+        </nav>
+      </header>
     );
   }
 }
