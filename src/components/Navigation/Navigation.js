@@ -28,7 +28,7 @@ class Navigation extends React.Component {
 
     return (
       <header className={css.container}>
-        <nav className={css.wrapper}>
+        <div className={css.wrapper}>
           <div className={css.navigation}>
             <Link to="/">
               <h3>{title}</h3>
@@ -37,19 +37,19 @@ class Navigation extends React.Component {
               {open ? Icons.Close : Icons.Arrow}
             </Icon>
           </div>
-          <ul
+          <nav
             className={cx({
               [css.list]: true,
               [css.open]: open
             })}
           >
             {routes.map(route => (
-              <li key={route} className={css.link}>
-                <Link to={route}>{route}</Link>
-              </li>
+              <Link to={route} key={route} className={css.link}>
+                {route}
+              </Link>
             ))}
-          </ul>
-        </nav>
+          </nav>
+        </div>
       </header>
     );
   }

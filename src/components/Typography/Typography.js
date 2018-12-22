@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import { Link as GatsbyLink } from "gatsby";
 import css from "./typography.module.css";
 
@@ -18,9 +19,15 @@ export const H4 = ({ children }) => {
   return <h4 className={css.h4}>{children}</h4>;
 };
 
-export const Link = ({ children, ...rest }) => {
+export const Link = ({ children, className, ...rest }) => {
   return (
-    <GatsbyLink className={css.link} {...rest}>
+    <GatsbyLink
+      className={cx({
+        [css.link]: true,
+        [className]: className
+      })}
+      {...rest}
+    >
       {children}
     </GatsbyLink>
   );
