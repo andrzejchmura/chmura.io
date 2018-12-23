@@ -1,4 +1,5 @@
 .container {
+  text-decoration: none;
   position: relative;
   background-color: var(--black);
   border-radius: 6px;
@@ -8,6 +9,8 @@
   padding: var(--size-s);
   height: 180px;
   transition: all 200ms;
+  background-position: center center;
+  background-blend-mode: multiply;
 
   @media (--tablet-landscape) {
     &:hover {
@@ -28,4 +31,24 @@
   left: var(--size-s);
   right: var(--size-s);
   bottom: var(--size-s);
+}
+
+.index {
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  vertical-align: top;
+  color: var(--grey);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: var(--size-xxs);
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 1px;
 }

@@ -3,12 +3,13 @@ import cx from "classnames";
 import { Link as GatsbyLink } from "gatsby";
 import css from "./typography.module.css";
 
-export const H1 = ({ children, inverted }) => {
+export const H1 = ({ children, inverted, className }) => {
   return (
     <h1
       className={cx({
         [css.h1]: true,
-        [css.inverted]: inverted
+        [css.inverted]: inverted,
+        [className]: className
       })}
     >
       {children}
@@ -16,12 +17,13 @@ export const H1 = ({ children, inverted }) => {
   );
 };
 
-export const H2 = ({ children, inverted }) => {
+export const H2 = ({ children, inverted, className }) => {
   return (
     <h2
       className={cx({
         [css.h2]: true,
-        [css.inverted]: inverted
+        [css.inverted]: inverted,
+        [className]: className
       })}
     >
       {children}
@@ -29,12 +31,13 @@ export const H2 = ({ children, inverted }) => {
   );
 };
 
-export const H3 = ({ children, inverted }) => {
+export const H3 = ({ children, inverted, className }) => {
   return (
     <h3
       className={cx({
         [css.h3]: true,
-        [css.inverted]: inverted
+        [css.inverted]: inverted,
+        [className]: className
       })}
     >
       {children}
@@ -42,12 +45,13 @@ export const H3 = ({ children, inverted }) => {
   );
 };
 
-export const H4 = ({ children, inverted }) => {
+export const H4 = ({ children, inverted, className }) => {
   return (
     <h4
       className={cx({
         [css.h4]: true,
-        [css.inverted]: inverted
+        [css.inverted]: inverted,
+        [className]: className
       })}
     >
       {children}

@@ -14,9 +14,24 @@ import "../global.css";
 const routes = ["about", "labs", "writings"];
 
 const projects = [
-  { title: "Almanax", desc: "Workout App", image: "" },
-  { title: "Unleash", desc: "Design system", image: "" },
-  { title: "Rush Hour", desc: "Solver algorithm exploration", image: "" }
+  {
+    slug: "project/almanax",
+    title: "Almanax",
+    desc: "Workout App",
+    image: "/parametric.jpg"
+  },
+  {
+    slug: "project/unleash",
+    title: "Unleash",
+    desc: "Design system",
+    image: ""
+  },
+  {
+    slug: "project/rush-hour",
+    title: "Rush Hour",
+    desc: "Solver algorithm exploration",
+    image: ""
+  }
 ];
 
 const IndexPage = props => {
@@ -32,8 +47,9 @@ const IndexPage = props => {
       <Section title="Projects">
         {projects.map((project, index) => (
           <Card
-            index={index}
             key={project.title}
+            index={index}
+            slug={project.slug}
             title={project.title}
             desc={project.desc}
             image={project.image}
@@ -41,8 +57,8 @@ const IndexPage = props => {
         ))}
       </Section>
       <Section title="Writings">
-        <Card title="First" />
-        <Card title="Second" />
+        {/* <Card title="First" /> */}
+        {/* <Card title="Second" /> */}
       </Section>
       <Footer />
     </React.Fragment>

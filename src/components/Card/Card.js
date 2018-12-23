@@ -1,6 +1,7 @@
 import React from "react";
+import { Link as GatsbyLink } from "gatsby";
 import css from "./card.module.css";
-import { H3, H4 } from "../Typography/Typography";
+import { H2, H3 } from "../Typography/Typography";
 
 const Count = ({ index }) => {
   const formatIndex = index => (index < 10 ? `0${index}` : `${index}`);
@@ -9,18 +10,28 @@ const Count = ({ index }) => {
     return null;
   }
 
-  return <H4 inverted>{formatIndex(index)}</H4>;
+  return <span className={css.index}>{formatIndex(index)}</span>;
 };
 
-const Card = ({ title, desc, image, index }) => {
+const Card = ({ slug, title, desc, image, index }) => {
+  console.log(image);
+
   return (
-    <article className={css.container} style={{ backgroundImage: image }}>
+    <GatsbyLink
+      to={slug}
+      className={css.container}
+      style={{ backgroundImage: `url(${image})` }}
+    >
       <Count index={index} />
       <div className={css.wrapper}>
-        <H3 inverted>{title}</H3>
-        <H4 inverted>{desc}</H4>
+        <H2 inverted className={css.title}>
+          {title}
+        </H2>
+        <H3 inverted className={css.subtitle}>
+          {desc}
+        </H3>
       </div>
-    </article>
+    </GatsbyLink>
   );
 };
 

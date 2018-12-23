@@ -1,5 +1,5 @@
 .container {
-  border: 1px solid lightblue;
+  background-color: var(--white);
 }
 
 .wrapper {
@@ -9,6 +9,8 @@
 }
 
 .grid {
+  margin-top: var(--size-xs);
+  margin-bottom: var(--size-s);
   display: grid;
   grid-gap: var(--size-s);
   grid-template-columns: 1fr;
