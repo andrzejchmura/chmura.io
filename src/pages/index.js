@@ -30,8 +30,9 @@ const IndexPage = props => {
       <Navigation title={"chmura.io"} routes={routes} />
       <Hero />
       <Section title="Projects">
-        {projects.map(project => (
+        {projects.map((project, index) => (
           <Card
+            index={index}
             key={project.title}
             title={project.title}
             desc={project.desc}

@@ -11,3 +11,7 @@ pre,
 a {
   font-family: var(--system-ui);
 }
+
+::selection {
+    background: #FADF52;
+}
