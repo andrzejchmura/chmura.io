@@ -1,4 +1,4 @@
 .container {
-  background-color: var(--background);
-  border: 2px solid var(--accent);
+  background-color: var(--bg);
+  border: 2px solid var(--primary);
 }

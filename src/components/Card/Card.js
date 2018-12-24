@@ -24,12 +24,8 @@ const Card = ({ slug, title, desc, image, index }) => {
     >
       <Count index={index} />
       <div className={css.wrapper}>
-        <H2 inverted className={css.title}>
-          {title}
-        </H2>
-        <H3 inverted className={css.subtitle}>
-          {desc}
-        </H3>
+        <H2 className={css.title}>{title}</H2>
+        <H3 className={css.subtitle}>{desc}</H3>
       </div>
     </GatsbyLink>
   );

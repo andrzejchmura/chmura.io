@@ -5,6 +5,10 @@ import Icon from "../../components/Icon/Icon";
 import Icons from "../../components/Icon/Icons";
 import { Link } from "../../components/Typography/Typography";
 
+// TODO: extract to config
+const title = "chmura.io";
+const routes = ["about", "labs", "writings"];
+
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +27,6 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const { title, routes } = this.props;
     const { open } = this.state;
 
     return (
@@ -44,7 +47,12 @@ class Navigation extends React.Component {
             })}
           >
             {routes.map(route => (
-              <Link to={route} key={route} className={css.link}>
+              <Link
+                to={route}
+                key={route}
+                className={css.link}
+                activeClassName={css.active}
+              >
                 {route}
               </Link>
             ))}

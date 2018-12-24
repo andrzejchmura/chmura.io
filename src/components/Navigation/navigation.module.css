@@ -1,5 +1,7 @@
 .container {
-  background: var(--background);
+  background: var(--bg);
+  will-change: background-color;
+  transition: background-color 200ms;
 }
 
 .wrapper {
@@ -52,7 +54,7 @@
 .link {
   position: relative;
   padding: var(--size-s);
-  border-bottom: 1px solid var(--grey);
+  border-bottom: 1px solid var(--fg-low);
 
   @media (--tablet-landscape) {
     border: 0;
@@ -75,11 +77,16 @@
     &:hover:after {
       transform: translateY(0);
     }
+
+    &.active:after {
+      transform: translateY(0);
+    }
+    
   }
 }
 
 .link:first-child {
-  border-top: 1px solid var(--grey);
+  border-top: 1px solid var(--fg-low);
 
   @media (--tablet-landscape) {
     border-top: 0;

@@ -1,9 +1,11 @@
 .container {
   padding-top: var(--size-l);
   padding-bottom: var(--size-l);
-  /* border: 1px solid black; */
-  background-image: url("/dot-transparent.png");
-  background-size: 24px;
+  background: var(--bg);
+  background-image: radial-gradient(var(--fg-medium) 1px, transparent 0);
+  background-size: 24px 24px;
+  transition: background 200ms;
+  will-change: background;
 
   @media (--desktop) {
     padding-top: var(--size-xl);
@@ -17,10 +19,11 @@
 }
 
 .backdrop {
-  background: var(--background);
+  background: var(--bg);
   width: 80%;
   padding: var(--size-m) var(--size-s);
-  /* border: 1px solid blue; */
+  transition: background 200ms;
+  will-change: background;
 
   @media (--desktop) {
     margin-left: -32px;

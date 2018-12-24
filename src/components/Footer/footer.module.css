@@ -1,5 +1,5 @@
 .container {
-  background: #333;
+  background: #24292E;
 
   @media (--tablet-portrait) {
     padding-top: var(--size-m);

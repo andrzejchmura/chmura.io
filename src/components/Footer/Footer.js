@@ -6,7 +6,7 @@ const Footer = props => {
   return (
     <footer className={css.container}>
       <div className={css.wrapper}>
-        <H4>chmura.io</H4>
+        <H4 inverted>chmura.io</H4>
       </div>
     </footer>
   );
