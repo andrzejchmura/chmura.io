@@ -15,15 +15,15 @@
   @media (--tablet-landscape) {
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 0 3px rgba(0,118,255,0.4);
-    }  
+      box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.4);
+    }
 
     &:focus {
       outline: 0;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(0,118,255,0.4);
+      box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.4);
     }
-  }  
+  }
 }
 
 .wrapper {

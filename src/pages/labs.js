@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Navigation from "../components/Navigation/Navigation";
+import PageHead from "../components/Pagehead/Pagehead";
 import Section from "../components/Section/Section";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
@@ -32,7 +33,8 @@ class LabsPage extends React.Component {
           title={`Labs | Chmura.io`}
         />
         <Navigation />
-        <Section title="Projects">
+        <PageHead />
+        <Section>
           {experiments.map((project, index) => (
             <Card
               key={project.title}
