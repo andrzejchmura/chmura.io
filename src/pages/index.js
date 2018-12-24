@@ -10,8 +10,7 @@ import Footer from "../components/Footer/Footer";
 import "../reset.css";
 import "../variables.css";
 import "../global.css";
-
-const routes = ["about", "labs", "writings"];
+import { theme } from "../utils/theme";
 
 const projects = [
   {
@@ -33,6 +32,17 @@ const projects = [
     image: ""
   }
 ];
+let mode = 0;
+
+const change = () => {
+  if (mode === 0) {
+    theme.dark();
+    mode = 1;
+  } else {
+    theme.light();
+    mode = 0;
+  }
+};
 
 const IndexPage = props => {
   return (
@@ -42,7 +52,12 @@ const IndexPage = props => {
         meta={[{ name: "description", content: "siteDescription goes here" }]}
         title={`Chmura.io`}
       />
-      <Navigation title={"chmura.io"} routes={routes} />
+      <div style={{ position: "absolute", top: "0", left: "0" }}>
+        <div style={{ background: "red" }} onClick={change}>
+          Change
+        </div>
+      </div>
+      <Navigation />
       <Hero />
       <Section title="Projects">
         {projects.map((project, index) => (

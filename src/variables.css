@@ -8,12 +8,22 @@
 
   --wrapper-width: 944px;
 
-  --background: #ffffff;
   --black: #24292E;
   --white: #ffffff;
+
+  --bg: #ffffff;
+  --fg-high: #24292E;
+  --fg-medium: #bababa; 
+  --fg-low: #ebebeb; 
   --primary: #0076FF;
-  --grey: #ebebeb;
-  --accent: red;
+
+  /* 
+  --bg: #24292E;
+  --fg-high: #ffffff;
+  --fg-medium: #666666; 
+  --fg-low: #ebebeb; 
+  --primary: #0076FF;
+ */
 
   --system-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
