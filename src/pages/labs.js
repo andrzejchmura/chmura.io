@@ -33,7 +33,7 @@ class LabsPage extends React.Component {
           title={`Labs | Chmura.io`}
         />
         <Navigation />
-        <PageHead />
+        <PageHead title="Labs" subtitle="Experiments with code" />
         <Section>
           {experiments.map((project, index) => (
             <Card
