@@ -16,7 +16,9 @@ const AboutPage = props => {
       />
       <Navigation />
       <PageHead title="About me" subtitle="Ex architect" />
-      <Drawing />
+      <Section>
+        <Drawing />
+      </Section>
       <Footer />
     </React.Fragment>
   );
