@@ -17,6 +17,7 @@
     "postcss-nested": "^4.1.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "vivus": "^0.4.4"
   }
 }
