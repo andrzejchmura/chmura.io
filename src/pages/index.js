@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import Section from "../components/Section/Section";
 import Card from "../components/Card/Card";
+import PostSummary from "../components/PostSummary/PostSummary";
 import Footer from "../components/Footer/Footer";
 
 import "../reset.css";
@@ -72,8 +72,8 @@ const IndexPage = props => {
         ))}
       </Section>
       <Section title="Writings">
-        {/* <Card title="First" /> */}
-        {/* <Card title="Second" /> */}
+        <PostSummary title="a" subtitle="a" />
+        <Card title="Second" />
       </Section>
       <Footer />
     </React.Fragment>

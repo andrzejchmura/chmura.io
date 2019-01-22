@@ -4,16 +4,21 @@ import css from "./drawing.module.css";
 
 class Drawing extends React.Component {
   componentDidMount() {
-    const rotonda = new Vivus("rotonda", {
+    this.rotonda = new Vivus("rotonda", {
       type: "scenario",
       duration: 300,
       dashGap: 20
     });
-    const construction = new Vivus("construction", {
+    this.construction = new Vivus("construction", {
       type: "scenario",
       duration: 300,
       dashGap: 20
     });
+  }
+
+  componentWillUnmount() {
+    this.rotonda.destroy();
+    this.construction.destroy();
   }
 
   render() {
