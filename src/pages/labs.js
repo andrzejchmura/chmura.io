@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import Navigation from "../components/Navigation/Navigation";
 import PageHead from "../components/Pagehead/Pagehead";
 import Section from "../components/Section/Section";
+import Grid from "../components/Grid/Grid";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import { theme } from "../utils/theme";
@@ -35,15 +36,17 @@ class LabsPage extends React.Component {
         <Navigation />
         <PageHead title="Labs" subtitle="Experiments with code" />
         <Section>
-          {experiments.map((project, index) => (
-            <Card
-              key={project.title}
-              index={index}
-              slug={project.slug}
-              title={project.title}
-              image={project.image}
-            />
-          ))}
+          <Grid>
+            {experiments.map((project, index) => (
+              <Card
+                key={project.title}
+                index={index}
+                slug={project.slug}
+                title={project.title}
+                image={project.image}
+              />
+            ))}
+          </Grid>
         </Section>
         <Footer />
       </React.Fragment>
