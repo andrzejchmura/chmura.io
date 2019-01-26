@@ -48,7 +48,7 @@ class Navigation extends React.Component {
           >
             {routes.map(route => (
               <Link
-                to={route}
+                to={`/${route}`}
                 key={route}
                 className={css.link}
                 activeClassName={css.active}

@@ -1,0 +1,17 @@
+.container {
+  padding-bottom: var(--size-m);
+  margin-bottom: var(--size-m);
+  border-bottom: 1px solid var(--fg-low);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: var(--size-xxs);
+  color: var(--fg-high);
+}
+
+.summary {
+  font-size: 16px;
+  color: var(--fg-medium);
+}

@@ -14,8 +14,6 @@ const Count = ({ index }) => {
 };
 
 const Card = ({ slug, title, desc, image, index }) => {
-  console.log(image);
-
   return (
     <GatsbyLink
       to={slug}
