@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "chmura.io",
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "gatsby": "^2.0.75",
+    "gatsby": "^2.0.98",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "postcss-custom-media": "^7.0.7",
