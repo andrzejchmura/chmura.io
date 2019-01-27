@@ -3,7 +3,7 @@ title: Hello World
 date: '2019-01-27'
 ---
 
-This is my first post on my new fake blog! How exciting!
+## This is my first post on my new fake blog! How exciting!
 
 Oh, and here's a great quote from this Wikipedia on
 [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
