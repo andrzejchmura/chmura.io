@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import { graphql } from "gatsby";
 import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import Section from "../components/Section/Section";
@@ -33,19 +34,10 @@ const projects = [
     image: ""
   }
 ];
-let mode = 0;
 
-const change = () => {
-  if (mode === 0) {
-    theme.dark();
-    mode = 1;
-  } else {
-    theme.light();
-    mode = 0;
-  }
-};
-
-const IndexPage = props => {
+const IndexPage = ({ data }) => {
+  console.log(theme);
+  const posts = data.allMarkdownRemark.edges;
   return (
     <React.Fragment>
       <Helmet
@@ -54,7 +46,7 @@ const IndexPage = props => {
         title={`Chmura.io`}
       />
       <div style={{ position: "absolute", top: "0", left: "0" }}>
-        <div style={{ background: "red" }} onClick={change}>
+        <div style={{ background: "red" }} onClick={theme.toggle.bind(theme)}>
           Change
         </div>
       </div>
@@ -75,14 +67,10 @@ const IndexPage = props => {
         </Grid>
       </Section>
       <Section title="Writings">
-        <PostSummary
-          title="Personal design system"
-          summary="A story about working on personal design system"
-        />
-        <PostSummary
-          title="Another post"
-          summary="A few thoughts on random problem"
-        />
+        {posts.map(post => {
+          const { excerpt, frontmatter } = post.node;
+          return <PostSummary title={frontmatter.title} summary={excerpt} />;
+        })}
       </Section>
       <Footer />
     </React.Fragment>
@@ -90,3 +78,48 @@ const IndexPage = props => {
 };
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`;
+
+// export const pageQuery = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+//       edges {
+//         node {
+//           excerpt
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

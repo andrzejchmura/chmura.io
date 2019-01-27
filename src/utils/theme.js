@@ -1,6 +1,16 @@
 const root = document.documentElement;
 
 export const theme = {
+  mode: "light",
+  toggle: function toggle() {
+    if (this.mode === "light") {
+      this.dark();
+      this.mode = "dark";
+    } else {
+      this.light();
+      this.mode = "light";
+    }
+  },
   light: () => {
     setTimeout(() => {
       root.style.setProperty("--bg", "#ffffff");
