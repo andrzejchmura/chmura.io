@@ -36,7 +36,6 @@ const projects = [
 ];
 
 const IndexPage = ({ data }) => {
-  console.log(theme);
   const posts = data.allMarkdownRemark.edges;
   return (
     <React.Fragment>
@@ -68,8 +67,15 @@ const IndexPage = ({ data }) => {
       </Section>
       <Section title="Writings">
         {posts.map(post => {
-          const { excerpt, frontmatter } = post.node;
-          return <PostSummary title={frontmatter.title} summary={excerpt} />;
+          const { excerpt, frontmatter, fields } = post.node;
+          return (
+            <PostSummary
+              key={fields.slug}
+              slug={fields.slug}
+              title={frontmatter.title}
+              summary={excerpt}
+            />
+          );
         })}
       </Section>
       <Footer />
@@ -90,6 +96,9 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          fields {
+            slug
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
@@ -99,27 +108,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
