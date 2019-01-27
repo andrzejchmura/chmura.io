@@ -20,7 +20,7 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/">← Go Back</Link>
+        <Link to="/blog">← Back to blog</Link>
       </Section>
       <Section>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

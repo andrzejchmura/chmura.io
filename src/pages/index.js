@@ -65,7 +65,7 @@ const IndexPage = ({ data }) => {
           ))}
         </Grid>
       </Section>
-      <Section title="Writings">
+      <Section title="Blog">
         {posts.map(post => {
           const { excerpt, frontmatter, fields } = post.node;
           return (
