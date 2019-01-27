@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: "https://chmura.io"
   },
   plugins: [
-    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -17,8 +16,9 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: ["gatsby-remark-copy-linked-files"]
+        plugins: ["gatsby-remark-images", "gatsby-remark-copy-linked-files"]
       }
-    }
+    },
+    "gatsby-plugin-postcss"
   ]
 };

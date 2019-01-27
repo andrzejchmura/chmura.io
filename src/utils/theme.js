@@ -1,4 +1,9 @@
-const root = document.documentElement;
+let root;
+if (typeof document !== "undefined") {
+  root = document.documentElement;
+} else {
+  root = {};
+}
 
 export const theme = {
   mode: "light",

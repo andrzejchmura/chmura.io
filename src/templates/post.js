@@ -9,7 +9,6 @@ import { Link } from "../components/Typography/Typography";
 
 const PostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark;
-  console.log(post);
 
   const { previous, next } = pageContext;
   return (
