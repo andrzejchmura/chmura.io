@@ -9,9 +9,6 @@ import Card from "../components/Card/Card";
 import PostSummary from "../components/PostSummary/PostSummary";
 import Footer from "../components/Footer/Footer";
 
-import "../reset.css";
-import "../variables.css";
-import "../global.css";
 import { theme } from "../utils/theme";
 
 const projects = [
