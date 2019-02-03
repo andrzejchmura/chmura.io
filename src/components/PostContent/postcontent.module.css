@@ -1,13 +1,15 @@
 .container {
   & h1 {
-    font-size: 28px;
   }
 
   & h2 {
-    font-size: 22px;
   }
 
   & h3 {
+    margin-top: var(--size-m);
+    margin-bottom: var(--size-s);
+    font-weight: 500;
+    font-size: 18px;
   }
 
   & p {
@@ -46,4 +48,22 @@
   max-width: var(--wrapper-width);
   margin: 0 auto;
   padding: var(--size-s);
+}
+
+.header {
+  margin-bottom: var(--size-m);
+}
+
+.title {
+  color: red;
+}
+
+.subtitle {
+  margin-bottom: var(--size-s);
+  color: green;
+}
+
+.time {
+  font-size: 0.85rem;
+  color: var(--fg-medium);
 }
