@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Navigation from "../components/Navigation/Navigation";
-import PageHead from "../components/Pagehead/Pagehead";
+import PostContent from "../components/PostContent/PostContent";
 import Section from "../components/Section/Section";
 import Footer from "../components/Footer/Footer";
 import { Link } from "../components/Typography/Typography";
@@ -22,9 +22,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <Section>
         <Link to="/blog">← Back to blog</Link>
       </Section>
-      <Section>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Section>
+      <PostContent content={post.html} />
       <Section>
         {previous && (
           <Link to={previous.fields.slug} rel="prev">

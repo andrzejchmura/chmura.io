@@ -1,0 +1,40 @@
+.container {
+  padding: var(--size-s);
+
+  & h1 {
+    font-size: 28px;
+  }
+
+  & h2 {
+    font-size: 22px;
+  }
+
+  & h3 {
+  }
+
+  & p {
+    margin-bottom: var(--size-s);
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & blockquote {
+    border: 1px solid red;
+    margin-bottom: var(--size-s);
+  }
+
+  & pre {
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: var(--size-s);
+  }
+
+  & code {
+    width: 100%;
+  }
+
+  & figure {
+  }
+}
