@@ -1,6 +1,4 @@
 .container {
-  padding: var(--size-s);
-
   & h1 {
     font-size: 28px;
   }
@@ -21,8 +19,11 @@
   }
 
   & blockquote {
-    border: 1px solid red;
+    border-left: var(--size-xxs) solid var(--primary);
+    padding-left: var(--size-s);
     margin-bottom: var(--size-s);
+    font-weight: 500;
+    line-height: 1.25;
   }
 
   & pre {
@@ -37,5 +38,12 @@
   }
 
   & figure {
+    border: 2px solid red;
   }
+}
+
+.wrapper {
+  max-width: var(--wrapper-width);
+  margin: 0 auto;
+  padding: var(--size-s);
 }

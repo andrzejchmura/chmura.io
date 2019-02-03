@@ -16,13 +16,13 @@ const PostTemplate = ({ data, pageContext }) => {
       <Helmet
         htmlAttributes={{ lang: "en" }}
         meta={[{ name: "description", content: "siteDescription goes here" }]}
-        title={`About | Chmura.io`}
+        title={`${post.frontmatter.title} | Chmura.io`}
       />
       <Navigation />
       <Section>
         <Link to="/blog">← Back to blog</Link>
       </Section>
-      <PostContent content={post.html} />
+      <PostContent post={post} />
       <Section>
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
