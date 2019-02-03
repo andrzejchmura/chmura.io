@@ -27,7 +27,8 @@
 
   & pre {
     width: 100%;
-    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
     margin-bottom: var(--size-s);
   }
 
