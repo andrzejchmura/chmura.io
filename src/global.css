@@ -12,30 +12,17 @@ a {
   font-family: var(--system-ui);
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--bg);
+  will-change: background-color;
+  transition: background-color 200ms;
+}
+
 ::selection {
   background: #fadf52;
-}
-
-.rotonda-drawing {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@keyframes rotonda-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade {
-  opacity: 0;
-  animation-name: rotonda-fade;
-  animation-duration: 500ms;
-  animation-delay: 4.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
 }

@@ -1,14 +1,7 @@
 .container {
-  background: #24292E;
-
   @media (--tablet-portrait) {
     padding-top: var(--size-m);
     padding-bottom: var(--size-m);
-  }
-
-  @media (--tablet-landscape) {
-    padding-top: var(--size-l);
-    padding-bottom: var(--size-l);
   }
 }
 
@@ -16,4 +9,12 @@
   padding: var(--size-s);
   max-width: var(--wrapper-width);
   margin: 0 auto;
+}
+
+.copyright {
+  color: var(--fg-medium);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
 }
