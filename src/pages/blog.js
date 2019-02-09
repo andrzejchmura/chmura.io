@@ -25,7 +25,8 @@ const BlogPage = ({ data }) => {
               key={fields.slug}
               slug={fields.slug}
               title={frontmatter.title}
-              summary={excerpt}
+              subtitle={frontmatter.subtitle}
+              date={frontmatter.date}
             />
           );
         })}
@@ -53,8 +54,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
+            subtitle
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

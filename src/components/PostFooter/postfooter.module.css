@@ -2,11 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  &:first-child {
-    color: red;
-  }
-
-  &:last-child {
-    color: green;
+  & a {
+    flex: 1;
   }
 }
