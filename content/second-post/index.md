@@ -1,7 +1,7 @@
 ---
-title: Second one
-subtitle: Trying a different approach
-date: '2019-01-27'
+title: Personal design system
+subtitle: Design system for the rest of us
+date: '2019-01-28'
 ---
 
 And this is the second post.
