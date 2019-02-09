@@ -11,11 +11,19 @@
 }
 
 .title a {
+  display: block;
   color: var(--fg-high);
   text-decoration: none;
+  margin-bottom: var(--size-xs);
 }
 
-.summary {
+.subtitle {
   font-size: 16px;
   color: var(--fg-medium);
+  margin-bottom: var(--size-s);
+}
+
+.time {
+  color: var(--fg-medium);
+  font-size: 0.85rem;
 }

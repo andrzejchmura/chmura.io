@@ -3,18 +3,9 @@ import Helmet from "react-helmet";
 import Navigation from "../components/Navigation/Navigation";
 import PageHead from "../components/Pagehead/Pagehead";
 import Section from "../components/Section/Section";
-import Grid from "../components/Grid/Grid";
-import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
+import { H3 } from "../components/Typography/Typography";
 import { theme } from "../utils/theme";
-
-const experiments = [
-  {
-    slug: "project/almanax",
-    title: "Almanax",
-    image: "/parametric.jpg"
-  }
-];
 
 class LabsPage extends React.Component {
   componentDidMount() {
@@ -34,19 +25,9 @@ class LabsPage extends React.Component {
           title={`Labs | Chmura.io`}
         />
         <Navigation />
-        <PageHead title="Labs" subtitle="Experiments with code" />
+        <PageHead title="Labs" />
         <Section>
-          <Grid>
-            {experiments.map((project, index) => (
-              <Card
-                key={project.title}
-                index={index}
-                slug={project.slug}
-                title={project.title}
-                image={project.image}
-              />
-            ))}
-          </Grid>
+          <h3 style={{ color: "#fff" }}>Currently under development</h3>
         </Section>
         <Footer />
       </React.Fragment>

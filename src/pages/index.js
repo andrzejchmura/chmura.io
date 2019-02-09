@@ -41,14 +41,9 @@ const IndexPage = ({ data }) => {
         meta={[{ name: "description", content: "siteDescription goes here" }]}
         title={`Chmura.io`}
       />
-      <div style={{ position: "absolute", top: "0", left: "0" }}>
-        <div style={{ background: "red" }} onClick={theme.toggle.bind(theme)}>
-          Change
-        </div>
-      </div>
       <Navigation />
       <Hero />
-      <Section title="Projects">
+      {/* <Section title="Projects">
         <Grid>
           {projects.map((project, index) => (
             <Card
@@ -61,16 +56,17 @@ const IndexPage = ({ data }) => {
             />
           ))}
         </Grid>
-      </Section>
-      <Section title="Blog">
+      </Section> */}
+      <Section title="Latest writings">
         {posts.map(post => {
-          const { excerpt, frontmatter, fields } = post.node;
+          const { frontmatter, fields } = post.node;
           return (
             <PostSummary
               key={fields.slug}
               slug={fields.slug}
               title={frontmatter.title}
-              summary={excerpt}
+              subtitle={frontmatter.subtitle}
+              date={frontmatter.date}
             />
           );
         })}
@@ -92,13 +88,13 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
+            subtitle
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

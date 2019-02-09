@@ -9,3 +9,9 @@
   margin: 0 auto;
   padding: var(--size-s);
 }
+
+.title {
+  margin-bottom: var(--size-s);
+  font-size: 20px;
+  color: var(--fg-medium);
+}

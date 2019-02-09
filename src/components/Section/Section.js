@@ -6,8 +6,8 @@ const Section = ({ title, children }) => {
   return (
     <section className={css.container}>
       <div className={css.wrapper}>
-        <H4>{title}</H4>
-        <div className={css.grid}>{children}</div>
+        {title && <H4 className={css.title}>{title}</H4>}
+        {children}
       </div>
     </section>
   );
