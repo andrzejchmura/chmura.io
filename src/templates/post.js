@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Navigation from "../components/Navigation/Navigation";
 import PostContent from "../components/PostContent/PostContent";
+import PostFooter from "../components/PostFooter/PostFooter";
 import Section from "../components/Section/Section";
 import Footer from "../components/Footer/Footer";
 import { Link } from "../components/Typography/Typography";
@@ -24,18 +25,19 @@ const PostTemplate = ({ data, pageContext }) => {
       </Section>
       <PostContent post={post} />
       <Section>
-        {previous && (
-          <Link to={previous.fields.slug} rel="prev">
-            ← {previous.frontmatter.title}
-          </Link>
-        )}
-        {next && (
-          <Link to={next.fields.slug} rel="next">
-            {next.frontmatter.title} →
-          </Link>
-        )}
+        <PostFooter>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </PostFooter>
       </Section>
-
       <Footer />
     </React.Fragment>
   );
