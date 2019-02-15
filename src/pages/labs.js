@@ -4,7 +4,6 @@ import Navigation from "../components/Navigation/Navigation";
 import PageHead from "../components/Pagehead/Pagehead";
 import Section from "../components/Section/Section";
 import Footer from "../components/Footer/Footer";
-import { H3 } from "../components/Typography/Typography";
 import { theme } from "../utils/theme";
 
 class LabsPage extends React.Component {
