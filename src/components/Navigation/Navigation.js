@@ -34,7 +34,7 @@ class Navigation extends React.Component {
         <div className={css.wrapper}>
           <div className={css.navigation}>
             <Link to="/">
-              <h3>{title}</h3>
+              <Icon className={css.logo}>{Icons.Logo}</Icon>
             </Link>
             <Icon className={css.button} onClick={this.toggleOpen}>
               {open ? Icons.Close : Icons.Arrow}

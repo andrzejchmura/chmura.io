@@ -20,6 +20,14 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--size-s);
+
+  @media (--tablet-landscape) {
+    padding: 0 var(--size-s);
+  }
+}
+
+.logo {
+  all: initial;
 }
 
 .button {
