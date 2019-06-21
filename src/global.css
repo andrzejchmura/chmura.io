@@ -1,3 +1,4 @@
+html,
 body,
 h1,
 h2,
@@ -9,7 +10,7 @@ p,
 blockquote,
 pre,
 a {
-  font-family: var(--system-ui);
+  font-family: var(--font-stack);
 }
 
 html {
