@@ -14,14 +14,13 @@ import { theme } from "../utils/theme";
 const projects = [
   {
     slug: "/project/almanax",
-    title: "Almanax",
-    desc: "Workout App",
-    image: "/parametric.jpg"
+    title: "Augmenter",
+    desc: "Web based augmented reality app"
   },
   {
     slug: "/project/unleash",
     title: "Unleash",
-    desc: "Design system",
+    desc: "Experimental design tool",
     image: ""
   },
   {
@@ -43,21 +42,19 @@ const IndexPage = ({ data }) => {
       />
       <Navigation />
       <Hero />
-      {/* <Section title="Projects">
+      <Section title="Projects">
         <Grid>
-          {projects.map((project, index) => (
-            <Card
+          {projects.map(project => (
+            <PostSummary
               key={project.title}
-              index={index}
               slug={project.slug}
               title={project.title}
-              desc={project.desc}
-              image={project.image}
+              subtitle={project.desc}
             />
           ))}
         </Grid>
-      </Section> */}
-      <Section title="Latest writings">
+      </Section>
+      <Section title="Notes">
         {posts.map(post => {
           const { frontmatter, fields } = post.node;
           return (

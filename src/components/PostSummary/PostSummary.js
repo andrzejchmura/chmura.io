@@ -10,9 +10,11 @@ const PostSummary = ({ slug, title, subtitle, date }) => {
         <Link to={slug}>{title}</Link>
       </H2>
       <H3 className={css.subtitle}>{subtitle}</H3>
-      <time className={css.time} dateTime={date}>
-        {date}
-      </time>
+      {date && (
+        <time className={css.time} dateTime={date}>
+          {date}
+        </time>
+      )}
     </article>
   );
 };

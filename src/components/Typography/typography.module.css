@@ -1,27 +1,19 @@
 .h1 {
   color: var(--fg-high);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: var(--size-xs);
-
-  @media (--desktop) {
-    font-size: 40px;
-  }
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .h2 {
-  color: var(--fg-medium);
+  color: var(--fg-high);
   font-size: 18px;
-  line-height: 1.25;
+  font-weight: 400;
+  line-height: 1.5;
 
   strong {
     font-weight: 600;
     color: var(--fg-high);
-  }
-
-  @media (--desktop) {
-    font-size: 24px;
   }
 }
 
@@ -37,11 +29,11 @@
 
 .link {
   color: var(--primary);
+  color: #0076ff;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.1em;
+  font-size: 16px;
   line-height: 1.5;
 }
 

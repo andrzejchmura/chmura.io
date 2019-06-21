@@ -27,7 +27,8 @@ export const theme = {
   },
   dark: () => {
     setTimeout(() => {
-      root.style.setProperty("--bg", "#24292E");
+      root.style.setProperty("--bg", "#000000");
+      // root.style.setProperty("--bg", "#24292E");
       root.style.setProperty("--fg-high", "#ffffff");
       root.style.setProperty("--fg-medium", "#bababa");
       root.style.setProperty("--fg-low", "#666666");

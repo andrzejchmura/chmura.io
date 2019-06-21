@@ -2,7 +2,7 @@
   margin-top: var(--size-xs);
   margin-bottom: var(--size-s);
   display: grid;
-  grid-gap: var(--size-s);
+  grid-gap: var(--size-m);
   grid-template-columns: 1fr;
 
   @media (--tablet-portrait) {

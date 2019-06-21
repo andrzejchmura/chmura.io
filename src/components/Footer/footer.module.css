@@ -12,9 +12,9 @@
 }
 
 .copyright {
+  font-size: 14px;
+  font-weight: 500;
   color: var(--fg-medium);
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.006em;
   line-height: 1.5;
 }

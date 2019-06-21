@@ -22,6 +22,8 @@ body {
   background-color: var(--bg);
   will-change: background-color;
   transition: background-color 200ms;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {

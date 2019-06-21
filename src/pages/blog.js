@@ -16,7 +16,7 @@ const BlogPage = ({ data }) => {
         title={`Blog | Chmura.io`}
       />
       <Navigation />
-      <PageHead title="Blog" subtitle="Ramblings about code" />
+      <PageHead title="Notes" />
       <Section>
         {posts.map(post => {
           const { excerpt, frontmatter, fields } = post.node;
