@@ -8,7 +8,8 @@
   --size-l: 64px;
   --size-xl: 128px;
 
-  --wrapper-width: 944px;
+  /* --wrapper-width: 944px; */
+  --wrapper-width: 740px;
 
   --black: #24292e;
   --white: #ffffff;
