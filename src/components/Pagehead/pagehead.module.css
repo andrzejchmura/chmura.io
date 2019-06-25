@@ -16,7 +16,7 @@
 .wrapper {
   max-width: var(--wrapper-width);
   margin: 0 auto;
-  padding: var(--size-s) var(--size-s);
+  padding: 48px var(--size-s) var(--size-s);
 }
 
 .title {

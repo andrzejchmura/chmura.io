@@ -21,7 +21,7 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/blog">← Back to blog</Link>
+        <Link to="/blog">{"<- Back to blog"}</Link>
       </Section>
       <PostContent post={post} />
       <Section>

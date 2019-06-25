@@ -17,13 +17,22 @@
     margin-top: var(--size-m);
     margin-bottom: var(--size-s);
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  & h4 {
+    margin-top: var(--size-m);
+    margin-bottom: var(--size-s);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   & p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: var(--size-s);
-    line-height: 1.5;
+    line-height: 1.75;
   }
 
   & a {
@@ -35,7 +44,7 @@
     padding-left: var(--size-s);
     margin-bottom: var(--size-s);
     font-weight: 500;
-    line-height: 1.25;
+    line-height: 1.75;
   }
 
   & pre {
@@ -74,6 +83,6 @@
 }
 
 .time {
-  font-size: 0.85rem;
+  font-size: 14px;
   color: var(--fg-medium);
 }
