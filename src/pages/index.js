@@ -32,7 +32,10 @@ const projects = [
 ];
 
 const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.notes.edges;
+  const projects = data.projects.edges;
+
+  console.log(projects);
   return (
     <React.Fragment>
       <Helmet
@@ -44,14 +47,17 @@ const IndexPage = ({ data }) => {
       <Hero />
       <Section title="Projects">
         <Grid>
-          {projects.map(project => (
-            <PostSummary
-              key={project.title}
-              slug={project.slug}
-              title={project.title}
-              subtitle={project.desc}
-            />
-          ))}
+          {projects.map(project => {
+            const { frontmatter, fields } = project.node;
+            return (
+              <PostSummary
+                key={fields.slug}
+                slug={fields.slug}
+                title={frontmatter.title}
+                subtitle={frontmatter.subtitle}
+              />
+            );
+          })}
         </Grid>
       </Section>
       <Section title="Notes">
@@ -82,7 +88,27 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    notes: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { type: { eq: "notes" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            subtitle
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { type: { eq: "projects" } } }
+    ) {
       edges {
         node {
           fields {

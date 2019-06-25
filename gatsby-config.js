@@ -10,14 +10,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "notes",
-        path: __dirname + "/notes/"
+        path: __dirname + "/content/notes/"
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "projects",
-        path: __dirname + "/projects/"
+        path: __dirname + "/content/projects/"
       }
     },
     {
