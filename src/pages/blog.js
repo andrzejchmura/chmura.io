@@ -46,7 +46,11 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { eq: $category } } }
+    ) {
       edges {
         node {
           excerpt
@@ -63,3 +67,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+// allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

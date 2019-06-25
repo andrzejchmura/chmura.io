@@ -13,7 +13,7 @@ import { theme } from "../utils/theme";
 
 const projects = [
   {
-    slug: "/project/almanax",
+    slug: "/project/augmenter",
     title: "Augmenter",
     desc: "Web based augmented reality app"
   },
