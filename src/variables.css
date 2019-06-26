@@ -8,7 +8,6 @@
   --size-l: 64px;
   --size-xl: 128px;
 
-  /* --wrapper-width: 944px; */
   --wrapper-width: 740px;
 
   --black: #24292e;
@@ -19,12 +18,6 @@
   --fg-medium: #5a5a5a;
   --fg-low: #ebebeb;
   --primary: #0076ff;
-
-  /* --bg: #24292e;
-  --fg-high: #ffffff;
-  --fg-medium: #666666;
-  --fg-low: #ebebeb;
-  --primary: #0076ff; */
 
   --font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",

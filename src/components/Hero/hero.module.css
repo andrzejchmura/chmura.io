@@ -2,7 +2,7 @@
   padding-top: var(--size-l);
   padding-bottom: var(--size-l);
   background: var(--bg);
-  background-image: radial-gradient(#4fe4c1 1px, transparent 0);
+  background-image: radial-gradient(var(--primary) 1px, transparent 0);
   background-size: 16px 16px;
   transition: background 200ms;
   will-change: background;

@@ -29,8 +29,6 @@
 
 .link {
   color: var(--primary);
-  /* color: #0076ff; */
-  color: #4fe4c1;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 600;
