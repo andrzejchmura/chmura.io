@@ -3,17 +3,17 @@ import Helmet from "react-helmet";
 import Navigation from "../components/Navigation/Navigation";
 import PageHead from "../components/Pagehead/Pagehead";
 import Section from "../components/Section/Section";
-import PostSummary from "../components/PostSummary/PostSummary";
+import ContentSummary from "../components/ContentSummary/ContentSummary";
 import Footer from "../components/Footer/Footer";
 
-const BlogPage = ({ data }) => {
+const NotesPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <React.Fragment>
       <Helmet
         htmlAttributes={{ lang: "en" }}
         meta={[{ name: "description", content: "siteDescription goes here" }]}
-        title={`Blog | Chmura.io`}
+        title={`Notes | Chmura.io`}
       />
       <Navigation />
       <PageHead title="Notes" />
@@ -21,7 +21,7 @@ const BlogPage = ({ data }) => {
         {posts.map(post => {
           const { excerpt, frontmatter, fields } = post.node;
           return (
-            <PostSummary
+            <ContentSummary
               key={fields.slug}
               slug={fields.slug}
               title={frontmatter.title}
@@ -36,7 +36,7 @@ const BlogPage = ({ data }) => {
   );
 };
 
-export default BlogPage;
+export default NotesPage;
 
 export const pageQuery = graphql`
   query {

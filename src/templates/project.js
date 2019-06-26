@@ -21,7 +21,7 @@ const ProjectTemplate = ({ data, pageContext }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/blog">{"<- Back to projects"}</Link>
+        <Link to="/notes">{"<- Back to projects"}</Link>
       </Section>
       <PostContent post={project} />
       <Section>
@@ -59,7 +59,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

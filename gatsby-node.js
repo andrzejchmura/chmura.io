@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
     const content = result.data.allMarkdownRemark.edges;
 
     content.forEach((record, index) => {
-      if (record.node.frontmatter.type === "project") {
+      if (record.node.fields.type === "projects") {
         createPage({
           path: record.node.fields.slug,
           component: projectTemplate,

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import css from "./postsummary.module.css";
+import css from "./contentsummary.module.css";
 import { H2, H3 } from "../Typography/Typography";
 
-const PostSummary = ({ slug, title, subtitle, date }) => {
+const ContentSummary = ({ slug, title, subtitle, date }) => {
   return (
     <article className={css.container}>
       <H2 className={css.title}>
@@ -19,4 +19,4 @@ const PostSummary = ({ slug, title, subtitle, date }) => {
   );
 };
 
-export default PostSummary;
+export default ContentSummary;

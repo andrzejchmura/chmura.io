@@ -21,7 +21,7 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/blog">{"<- Back to blog"}</Link>
+        <Link to="/notes">{"<- Back to notes"}</Link>
       </Section>
       <PostContent post={post} />
       <Section>
@@ -46,7 +46,7 @@ const PostTemplate = ({ data, pageContext }) => {
 export default PostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query PostBySlug($slug: String!) {
     site {
       siteMetadata {
         title

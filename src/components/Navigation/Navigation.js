@@ -7,7 +7,7 @@ import { Link } from "../../components/Typography/Typography";
 
 // TODO: extract to config
 const title = "chmura.io";
-const routes = ["blog", "labs"];
+const routes = ["notes", "labs"];
 
 class Navigation extends React.Component {
   constructor(props) {
