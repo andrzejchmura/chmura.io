@@ -1,17 +1,14 @@
 import React from "react";
 import { H1, H2 } from "../Typography/Typography";
-import css from "./postcontent.module.css";
+import css from "./projectcontent.module.css";
 
-const PostContent = ({ content }) => {
-  const { title, subtitle, date } = content.frontmatter;
+const ProjectContent = ({ content }) => {
+  const { title, subtitle } = content.frontmatter;
   return (
     <div className={css.wrapper}>
       <header className={css.header}>
         <H1 className={css.title}>{title}</H1>
         <H2 className={css.subtitle}>{subtitle}</H2>
-        <time className={css.time} dateTime={date}>
-          {date}
-        </time>
       </header>
       <article
         className={css.container}
@@ -21,4 +18,4 @@ const PostContent = ({ content }) => {
   );
 };
 
-export default PostContent;
+export default ProjectContent;

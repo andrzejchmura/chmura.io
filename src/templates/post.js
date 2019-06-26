@@ -23,7 +23,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <Section>
         <Link to="/notes">{"<- Back to notes"}</Link>
       </Section>
-      <PostContent post={post} />
+      <PostContent content={post} />
       <Section>
         <PostFooter>
           {previous && (

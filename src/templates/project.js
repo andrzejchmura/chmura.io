@@ -2,42 +2,28 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Navigation from "../components/Navigation/Navigation";
-import PostContent from "../components/PostContent/PostContent";
-import PostFooter from "../components/PostFooter/PostFooter";
+import ProjectContent from "../components/ProjectContent/ProjectContent";
 import Section from "../components/Section/Section";
 import Footer from "../components/Footer/Footer";
 import { Link } from "../components/Typography/Typography";
 
-const ProjectTemplate = ({ data, pageContext }) => {
+const ProjectTemplate = ({ data }) => {
   const project = data.markdownRemark;
 
-  const { previous, next } = pageContext;
   return (
     <React.Fragment>
       <Helmet
         htmlAttributes={{ lang: "en" }}
-        meta={[{ name: "description", content: "siteDescription goes here" }]}
-        title={`${project.frontmatter.title} | Chmura.io`}
+        meta={[
+          { name: "description", content: `${project.frontmatter.subtitle}` }
+        ]}
+        title={`${project.frontmatter.title} | chmura.io`}
       />
       <Navigation />
       <Section>
         <Link to="/notes">{"<- Back to projects"}</Link>
       </Section>
-      <PostContent post={project} />
-      <Section>
-        <PostFooter>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </PostFooter>
-      </Section>
+      <ProjectContent content={project} />
       <Footer />
     </React.Fragment>
   );
