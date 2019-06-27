@@ -21,7 +21,7 @@ const ProjectTemplate = ({ data }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/notes">{"<- Back to projects"}</Link>
+        <Link to="/projects">{"<- Back to projects"}</Link>
       </Section>
       <ProjectContent content={project} />
       <Footer />
@@ -45,6 +45,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+        image
       }
     }
   }
