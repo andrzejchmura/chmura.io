@@ -39,6 +39,11 @@
     text-decoration: none;
   }
 
+  & a::after {
+    content: "°";
+    color: var(--fg-high);
+  }
+
   & blockquote {
     border-left: var(--size-xxs) solid var(--primary);
     padding-left: var(--size-s);
