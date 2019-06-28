@@ -21,18 +21,20 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/notes">{"<- Back to notes"}</Link>
+        <Link to="/notes" isSecondary={true}>
+          {"<- Back to notes"}
+        </Link>
       </Section>
       <PostContent content={post} />
       <Section>
         <PostFooter>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
+            <Link to={previous.fields.slug} rel="prev" isSecondary={true}>
               ← {previous.frontmatter.title}
             </Link>
           )}
           {next && (
-            <Link to={next.fields.slug} rel="next">
+            <Link to={next.fields.slug} rel="next" isSecondary={true}>
               {next.frontmatter.title} →
             </Link>
           )}

@@ -21,7 +21,9 @@ const ProjectTemplate = ({ data }) => {
       />
       <Navigation />
       <Section>
-        <Link to="/projects">{"<- Back to projects"}</Link>
+        <Link to="/projects" isSecondary={true}>
+          {"<- Back to projects"}
+        </Link>
       </Section>
       <ProjectContent content={project} />
       <Footer />

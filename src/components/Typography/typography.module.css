@@ -39,6 +39,14 @@
   &:hover {
     color: var(--primary-dark);
   }
+
+  &.secondary {
+    color: var(--fg-medium);
+  }
+
+  &.secondary:hover {
+    color: var(--fg-high);
+  }
 }
 
 .inverted {

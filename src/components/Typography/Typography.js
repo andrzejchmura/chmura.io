@@ -59,11 +59,12 @@ export const H4 = ({ children, inverted, className }) => {
   );
 };
 
-export const Link = ({ children, className, ...rest }) => {
+export const Link = ({ children, isSecondary, className, ...rest }) => {
   return (
     <GatsbyLink
       className={cx({
         [css.link]: true,
+        [css.secondary]: isSecondary,
         [className]: className
       })}
       {...rest}
