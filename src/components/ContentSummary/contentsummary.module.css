@@ -15,6 +15,11 @@
   color: var(--fg-high);
   text-decoration: none;
   margin-bottom: var(--size-xs);
+  transition: color 150ms;
+
+  &:hover {
+    color: var(--primary-dark);
+  }
 }
 
 .subtitle {

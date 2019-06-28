@@ -17,7 +17,9 @@
   --fg-high: #24292e;
   --fg-medium: #5a5a5a;
   --fg-low: #ebebeb;
-  --primary: #0076ff;
+  /* --primary: #0076ff; */
+  --primary: #4fe4c1;
+  --primary-dark: #1fc79f;
 
   --font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",

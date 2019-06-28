@@ -7,7 +7,7 @@ import { Link } from "../../components/Typography/Typography";
 
 // TODO: extract to config
 const title = "chmura.io";
-const routes = ["notes", "labs"];
+const routes = ["projects", "notes", "labs"];
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -33,11 +33,7 @@ class Navigation extends React.Component {
       <header className={css.container}>
         <div className={css.wrapper}>
           <div className={css.navigation}>
-            <Link to="/">
-              <Icon className={css.logo} alt={title}>
-                {Icons.Logo}
-              </Icon>
-            </Link>
+            <Link to="/">About</Link>
             <Icon className={css.button} onClick={this.toggleOpen}>
               {open ? Icons.Close : Icons.Arrow}
             </Icon>

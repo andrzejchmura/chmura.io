@@ -6,20 +6,20 @@ import Section from "../components/Section/Section";
 import ContentSummary from "../components/ContentSummary/ContentSummary";
 import Footer from "../components/Footer/Footer";
 
-const NotesPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges;
+const ProjectsPage = ({ data }) => {
+  const projects = data.allMarkdownRemark.edges;
   return (
     <React.Fragment>
       <Helmet
         htmlAttributes={{ lang: "en" }}
         meta={[{ name: "description", content: "siteDescription goes here" }]}
-        title={`Notes | Chmura.io`}
+        title={`Projects | Chmura.io`}
       />
       <Navigation />
-      <PageHead title="Notes" />
+      <PageHead title="Projects" />
       <Section>
-        {posts.map(post => {
-          const { frontmatter, fields } = post.node;
+        {projects.map(project => {
+          const { frontmatter, fields } = project.node;
           return (
             <ContentSummary
               key={fields.slug}
@@ -36,7 +36,7 @@ const NotesPage = ({ data }) => {
   );
 };
 
-export default NotesPage;
+export default ProjectsPage;
 
 export const pageQuery = graphql`
   query {
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
 
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { type: { eq: "notes" } } }
+      filter: { fields: { type: { eq: "projects" } } }
     ) {
       edges {
         node {
@@ -60,7 +60,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             subtitle
-            date(formatString: "MMMM DD, YYYY")
           }
         }
       }
