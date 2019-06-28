@@ -6,7 +6,6 @@ import Icons from "../../components/Icon/Icons";
 import { Link } from "../../components/Typography/Typography";
 
 // TODO: extract to config
-const title = "chmura.io";
 const routes = ["projects", "notes", "labs"];
 
 class Navigation extends React.Component {

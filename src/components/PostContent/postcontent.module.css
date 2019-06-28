@@ -37,11 +37,16 @@
 
   & a {
     text-decoration: none;
+    color: var(--primary);
+  }
+
+  & a:hover {
+    color: var(--primary-dark);
   }
 
   & a::after {
     content: "°";
-    color: var(--fg-high);
+    color: var(--primary-dark);
   }
 
   & blockquote {

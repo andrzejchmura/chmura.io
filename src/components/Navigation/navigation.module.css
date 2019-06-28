@@ -11,7 +11,8 @@
   @media (--tablet-landscape) {
     display: flex;
     justify-content: space-between;
-    padding: var(--size-xs);
+    padding-top: var(--size-xs);
+    padding-bottom: var(--size-xs);
   }
 }
 
@@ -80,6 +81,10 @@
 
     &:hover:after {
       transform: translateY(0);
+    }
+
+    &.active {
+      color: var(--primary-dark);
     }
 
     &.active:after {
