@@ -1,19 +1,18 @@
 import React from "react";
-import Vivus from "vivus";
 import css from "./drawing.module.css";
 
 class Drawing extends React.Component {
   componentDidMount() {
-    this.rotonda = new Vivus("rotonda", {
-      type: "scenario",
-      duration: 300,
-      dashGap: 20
-    });
-    this.construction = new Vivus("construction", {
-      type: "scenario",
-      duration: 300,
-      dashGap: 20
-    });
+    // this.rotonda = new Vivus("rotonda", {
+    //   type: "scenario",
+    //   duration: 300,
+    //   dashGap: 20
+    // });
+    // this.construction = new Vivus("construction", {
+    //   type: "scenario",
+    //   duration: 300,
+    //   dashGap: 20
+    // });
   }
 
   componentWillUnmount() {

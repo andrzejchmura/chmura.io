@@ -63,7 +63,7 @@
   }
 
   & img {
-    border: 2px solid green;
+    border-radius: var(--size-xxs);
   }
 }
 
@@ -84,8 +84,4 @@
 .subtitle {
   margin-bottom: var(--size-s);
   color: var(--fg-medium);
-}
-
-.image {
-  border: 2px solid red;
 }
