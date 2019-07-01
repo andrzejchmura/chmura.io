@@ -35,6 +35,18 @@ module.exports = {
         ]
       }
     },
-    "gatsby-plugin-postcss"
+    "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "chmura.io",
+        short_name: "chmura.io",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#4fe4c1",
+        display: "standalone",
+        icon: "static/thought.png"
+      }
+    }
   ]
 };
