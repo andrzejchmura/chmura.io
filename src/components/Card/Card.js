@@ -13,19 +13,21 @@ const Count = ({ index }) => {
   return <span className={css.index}>{formatIndex(index)}</span>;
 };
 
-const Card = ({ slug, title, desc, image, index }) => {
+const Card = ({ href, title, subtitle, image, index }) => {
   return (
-    <GatsbyLink
-      to={slug}
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={href}
       className={css.container}
       style={{ backgroundImage: `url(${image})` }}
     >
       <Count index={index} />
       <div className={css.wrapper}>
         <H2 className={css.title}>{title}</H2>
-        <H3 className={css.subtitle}>{desc}</H3>
+        <H3 className={css.subtitle}>{subtitle}</H3>
       </div>
-    </GatsbyLink>
+    </a>
   );
 };
 

@@ -1,27 +1,28 @@
 .container {
   text-decoration: none;
   position: relative;
-  background-color: var(--black);
   border-radius: 6px;
   border-width: 2px;
   border-style: solid;
   border-color: var(--fg-high);
   padding: var(--size-s);
-  height: 180px;
+  height: 160px;
+  background-color: var(--black);
   transition: all 200ms;
+  background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
 
   @media (--tablet-landscape) {
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.4);
+      box-shadow: 0 0 0 3px rgba(79, 228, 193, 0.4);
     }
 
     &:focus {
       outline: 0;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.4);
+      box-shadow: 0 0 0 3px rgba(79, 228, 193, 0.4);
     }
   }
 }
@@ -34,23 +35,22 @@
 }
 
 .index {
-  font-size: 12px;
-  font-weight: 200;
-  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 500;
   vertical-align: top;
-  color: var(--fg-low);
+  font-feature-settings: "ss01" 1, "zero" 1;
+  color: var(--fg-medium);
 }
 
 .title {
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: var(--size-xxs);
-  color: var(--white);
+  color: var(--fg-high);
 }
 
 .subtitle {
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--fg-medium);
 }
