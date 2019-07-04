@@ -4,11 +4,8 @@ import { graphql } from "gatsby";
 import Navigation from "../components/Navigation/Navigation";
 import Hero from "../components/Hero/Hero";
 import Section from "../components/Section/Section";
-import Grid from "../components/Grid/Grid";
 import ContentSummary from "../components/ContentSummary/ContentSummary";
 import Footer from "../components/Footer/Footer";
-
-import { theme } from "../utils/theme";
 
 const IndexPage = ({ data }) => {
   const posts = data.notes.edges;
@@ -24,19 +21,17 @@ const IndexPage = ({ data }) => {
       <Navigation />
       <Hero />
       <Section title="Projects">
-        <Grid>
-          {projects.map(project => {
-            const { frontmatter, fields } = project.node;
-            return (
-              <ContentSummary
-                key={fields.slug}
-                slug={fields.slug}
-                title={frontmatter.title}
-                subtitle={frontmatter.subtitle}
-              />
-            );
-          })}
-        </Grid>
+        {projects.map(project => {
+          const { frontmatter, fields } = project.node;
+          return (
+            <ContentSummary
+              key={fields.slug}
+              slug={fields.slug}
+              title={frontmatter.title}
+              subtitle={frontmatter.subtitle}
+            />
+          );
+        })}
       </Section>
       <Section title="Notes">
         {posts.map(post => {
