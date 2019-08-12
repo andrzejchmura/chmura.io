@@ -3,7 +3,7 @@ title: Augmenter
 subtitle: Web based augmented reality app
 ---
 
-![Augmented Reality App](./augmenter-hero.png)
+![Augmented Reality App](./augmenter-hero.jpg)
 
 Augmenter lets you style your room with a piece of art before buying it.
 
@@ -17,6 +17,6 @@ Augmenter combines the power of client-side machine learning with TensorFlow.js,
 
 I was involved in every project phase, starting from ideation to deployment. During the lifespan of the project I created multiple application modules and integrated existing libraries.
 
-![Augmented Reality App](./01.png)
+![Augmented Reality App](./01.jpg)
 
-![Augmented Reality App](./02.png)
+![Augmented Reality App](./02.jpg)
