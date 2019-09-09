@@ -29,6 +29,23 @@
     line-height: 1.5;
   }
 
+  /* H6 is used to style project metadata */
+  & h6 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--fg-medium);
+    text-transform: uppercase;
+
+    & strong {
+      color: var(--fg-high);
+    }
+  }
+
+  & h6:last-of-type {
+    margin-bottom: var(--size-s);
+  }
+
   & p {
     font-size: 16px;
     margin-bottom: var(--size-s);
@@ -37,6 +54,11 @@
 
   & a {
     text-decoration: none;
+    color: var(--primary-dark);
+  }
+
+  & a:hover {
+    color: var(--primary);
   }
 
   & blockquote {
@@ -84,4 +106,8 @@
 .subtitle {
   margin-bottom: var(--size-s);
   color: var(--fg-medium);
+}
+
+.meta {
+  color: red;
 }

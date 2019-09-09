@@ -12,7 +12,7 @@ const Hero = props => {
             Currently working on web based mobile
             <strong> augmented reality </strong>experiences.
           </H2>
-          <a href={"/"} className={css.cta}>
+          <a href="mailto:andrzej@chmura.io" className={css.cta}>
             Get in touch ->
           </a>
         </div>

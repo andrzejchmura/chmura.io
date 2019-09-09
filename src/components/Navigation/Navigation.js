@@ -32,7 +32,7 @@ class Navigation extends React.Component {
       <header className={css.container}>
         <div className={css.wrapper}>
           <div className={css.navigation}>
-            <Link to="/">About</Link>
+            <Link to="/">Home</Link>
             <Icon className={css.button} onClick={this.toggleOpen}>
               {open ? Icons.Close : Icons.Arrow}
             </Icon>

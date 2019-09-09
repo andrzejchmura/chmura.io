@@ -20,11 +20,6 @@ const ProjectTemplate = ({ data }) => {
         title={`${project.frontmatter.title} | chmura.io`}
       />
       <Navigation />
-      <Section>
-        <Link to="/projects" isSecondary={true}>
-          {"<- Back to projects"}
-        </Link>
-      </Section>
       <ProjectContent content={project} />
       <Footer />
     </React.Fragment>

@@ -20,11 +20,6 @@ const PostTemplate = ({ data, pageContext }) => {
         title={`${post.frontmatter.title} | Chmura.io`}
       />
       <Navigation />
-      <Section>
-        <Link to="/notes" isSecondary={true}>
-          {"<- Back to notes"}
-        </Link>
-      </Section>
       <PostContent content={post} />
       <Section>
         <PostFooter>
