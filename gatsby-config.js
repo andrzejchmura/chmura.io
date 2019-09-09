@@ -47,6 +47,14 @@ module.exports = {
         display: "standalone",
         icon: "static/thought.png"
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-147476645-1",
+        head: false,
+        respectDNT: true
+      }
     }
   ]
 };
