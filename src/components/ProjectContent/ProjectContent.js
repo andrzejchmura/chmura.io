@@ -1,9 +1,9 @@
 import React from "react";
-import { H1, H2 } from "../Typography/Typography";
+import { H1, H2, H3 } from "../Typography/Typography";
 import css from "./projectcontent.module.css";
 
 const ProjectContent = ({ content }) => {
-  const { title, subtitle } = content.frontmatter;
+  const { title, subtitle, release, code } = content.frontmatter;
   return (
     <div className={css.wrapper}>
       <header className={css.header}>

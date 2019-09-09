@@ -87,6 +87,18 @@
   & img {
     border-radius: var(--size-xxs);
   }
+
+  & ul {
+    margin-bottom: var(--size-s);
+
+    & li {
+      line-height: 1.5;
+    }
+
+    & li:not(:last-child) {
+      margin-bottom: var(--size-xs);
+    }
+  }
 }
 
 .wrapper {
