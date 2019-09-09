@@ -1,9 +1,15 @@
 ---
-title: Augmenter
-subtitle: Web based augmented reality app
+title: "Augmenter"
+subtitle: "Web based augmented reality app"
+date: "2019-09-09"
 ---
 
-![Augmented Reality App](./augmenter-hero.jpg)
+![Augmented Reality App](augmenter-hero.jpg)
+
+###### Release: **Q4 2019**
+###### Code: **proprietary**
+
+### Overview
 
 Augmenter lets you style your room with a piece of art before buying it.
 
@@ -17,6 +23,10 @@ Augmenter combines the power of client-side machine learning with TensorFlow.js,
 
 I was involved in every project phase, starting from ideation to deployment. During the lifespan of the project I created multiple application modules and integrated existing libraries.
 
-![Augmented Reality App](./01.jpg)
+### Tech used
 
-![Augmented Reality App](./02.jpg)
+React + Redux, Three.js, TensorFlow.js, Firebase
+
+![Augmented Reality App](01.jpg)
+
+![Augmented Reality App](02.jpg)
